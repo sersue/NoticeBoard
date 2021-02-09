@@ -3,13 +3,14 @@ package org.example.domain.posts;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.example.domain.BaseTimeEntity;
 
 import javax.persistence.*;
 
 @Entity
 @NoArgsConstructor //entity는 기본 생성자 꼭 필요
 @Getter
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

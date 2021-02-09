@@ -21,6 +21,16 @@
         </tr>
         </thead>
         <tbody id="tbody">
+        {{#posts}}
+            <tr>
+                <td>{{index}}</td>
+                <td>{{tag}}</td>
+                <td>{{url}}</td>
+                <td>{{writer}}</td>
+                <td>{{modifiedDate}}</td>
+
+            </tr>
+            {{/posts}}
 
         </tbody>
     </table>
