@@ -14,12 +14,13 @@ import java.util.List;
 
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 import static org.assertj.core.api.Assertions.assertThat;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = RANDOM_PORT)
 public class PostsRepositoryTest {
 
     @Autowired
-    PostsRepository postsRepository;
+    private PostsRepository postsRepository;
 
     @After
     public void clenup(){

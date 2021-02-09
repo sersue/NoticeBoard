@@ -16,10 +16,10 @@ public class Posts {
     private Long index;
     //태그
     @Column(length = 500, nullable = false)
-    private String tag;
+    private String Tag;
     //url
     @Column(length = 500, nullable = false)
-    private String url;
+    private String Url;
     //작성자
     @Column(length = 50, nullable = false)
     private String writer;
@@ -29,8 +29,8 @@ public class Posts {
 
     @Builder
     public Posts(String tag, String url, String writer,String explain){
-        this.tag= tag;
-        this.url = url;
+        this.Tag= tag;
+        this.Url = url;
         this.writer =writer;
         this.explain = explain;
     }
