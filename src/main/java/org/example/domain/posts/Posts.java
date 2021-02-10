@@ -4,6 +4,9 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.example.domain.BaseTimeEntity;
+import org.example.web.dto.PostsUpdateRequestDto;
+import org.h2.command.dml.Explain;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import javax.persistence.*;
 
@@ -17,10 +20,10 @@ public class Posts extends BaseTimeEntity {
     private Long index;
     //태그
     @Column(length = 500, nullable = false)
-    private String Tag;
+    private String tag;
     //url
     @Column(length = 500, nullable = false)
-    private String Url;
+    private String url;
     //작성자
     @Column(length = 50, nullable = false)
     private String writer;
@@ -30,9 +33,15 @@ public class Posts extends BaseTimeEntity {
 
     @Builder
     public Posts(String tag, String url, String writer,String explain){
-        this.Tag= tag;
-        this.Url = url;
+        this.tag= tag;
+        this.url = url;
         this.writer =writer;
         this.explain = explain;
+    }
+    public void update(String tag, String url, String explain){
+        this.tag =tag;
+        this.url =url;
+        this.explain=explain;
+
     }
 }
